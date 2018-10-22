@@ -1,0 +1,21 @@
+<div>
+  <H1>Task List</H1>
+  <table border=2>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>IsComplete</th>
+      <th>Action</th>
+    </tr>
+    <ng-container *ngFor="let data of userList;let i=index; ">
+      <tr *ngIf="data.isComplete == false" >
+      <!-- <tr> -->
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.isComplete}}</td>
+        <td><button (click)="modified(i)">Modifie</button></td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+<hr>
